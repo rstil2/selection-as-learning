@@ -1,0 +1,53 @@
+# Apple private keys — never commit these
+*.p8
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.Python
+env/
+venv/
+.venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bcf
+*.run.xml
+
+# Internal working drafts — not for public repo
+*.docx
+01_manuscript_outline.md
+02_mathematical_framework.md
+03_literature_gap_analysis.md
+04_manuscript_draft.md
+00_cover_letter.md
+
+# Submission archive (binary; regenerate from source)
+*.tar.gz
+05_supplementary_notes.md
