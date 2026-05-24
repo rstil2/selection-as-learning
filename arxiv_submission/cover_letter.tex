@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.85in,bottom=0.85in,left=1in,right=1in]{geometry}
+\usepackage{times}
+\usepackage{parskip}
+\setlength{\parskip}{6pt}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+\pagestyle{empty}
+
+\begin{document}
+
+\noindent
+May 24, 2026
+
+\bigskip
+
+\noindent
+The Editors\\
+\textit{Nature}
+
+\bigskip
+
+\noindent
+Dear Editors,
+
+\medskip
+
+We submit for your consideration ``Selection as Learning: A Formal Unification of
+Evolutionary Quantitative Genetics and PAC Learning Theory.''
+
+The central claim is a theorem, not an analogy: Fisher's Fundamental Theorem of
+Natural Selection, the Price Equation, and PAC generalization bounds are
+instances of empirical risk minimization on a Fisher-information manifold under a
+capacity constraint. This shared geometric structure means that natural selection
+\emph{is} natural gradient ascent---a connection that resolves longstanding
+interpretive debates about the FTNS, extends Valiant's PAC-evolvability
+framework from binary to continuous polygenic phenotypes, and yields the first
+quantitative bridge between population genetics and statistical learning theory.
+
+The empirical value is immediate. Because the unified framework produces a
+computable threshold---the evolutionary sample complexity $N_e^*$, the tumour
+cell burden below which reliable resistance evolution is mathematically
+precluded---it is testable against cancer evolutionary genomics data. Across nine
+cancer types, the theoretical PAC bound $\varepsilon^*(N_e, V_A)$ correlates with
+observed resistance durability at $r = 0.96$ ($p < 0.0001$). Across twenty cancer
+types, the FTNS convergence rate $V_A/\bar{W}$ correlates with measured selection
+coefficients at $r = 0.999$ ($p < 0.0001$). Both $N_e$ and $V_A$ are already
+delivered by standard clinical whole-genome sequencing pipelines. The threshold
+$N_e^*$ is computable at treatment initiation.
+
+The clinical consequence is equally direct. Standard-of-care sequential
+monotherapy inadvertently provides tumours with the iterative training loops that
+maximise evolutionary learning: each drug line is one labelled training example,
+each relapse a weight update. Upfront combination therapy engineered to maintain
+$N_e < N_e^*$ closes the evolutionary search space entirely before resistance can
+be reliably discovered. The mathematics does not suggest sequential monotherapy
+is suboptimal. It proves it.
+
+We believe this paper is well suited to \textit{Nature} for three reasons. First,
+the theoretical result is foundational: it places 3.8 billion years of natural
+selection within the formal framework of machine learning, with consequences for
+evolutionary biology, statistical learning theory, and ecology. Second, the
+empirical validation is immediate and reproducible from publicly available data
+(cBioPortal, PCAWG, TRACERx 421), with all code deposited at
+\href{https://github.com/rstil2/selection-as-learning}{github.com/rstil2/selection-as-learning}.
+Third, the clinical application---a computable resistance threshold derivable at
+the bedside from existing sequencing data---speaks directly to one of the most
+consequential unsolved problems in oncology.
+
+The manuscript has not been published or submitted elsewhere. We have no
+competing interests to declare.
+
+\bigskip
+
+\noindent
+Sincerely,
+
+\bigskip
+\bigskip
+
+\noindent
+R.\ Craig Stillwell\\
+Independent Researcher\\
+\href{mailto:craig.stillwell@gmail.com}{craig.stillwell@gmail.com}
+
+\end{document}
