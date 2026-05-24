@@ -4,13 +4,27 @@
 
 R. Craig Stillwell (independent researcher)
 
-[bioRxiv preprint] · [arXiv submission package](selection-as-learning-arxiv.tar.gz)
+[bioRxiv preprint] · [Nature submission (under review)]
+
+---
+
+## Key Results
+
+| Result | Value | What it means |
+|--------|-------|---------------|
+| Cross-cancer PAC bound validation | **r = 0.96**, p < 0.0001 (9 cancer types) | The theoretical resistance-evolution threshold predicts observed resistance durability from two clinical measurements |
+| FTNS convergence-rate validation | **r = 0.999**, p < 0.0001 (20 cancer types) | Fisher's Fundamental Theorem predicts measured tumour selection coefficients with near-perfect accuracy |
+| Computable clinical threshold | **N\*_e** from standard WGS | The tumour cell burden below which reliable resistance evolution is mathematically precluded — calculable at diagnosis |
 
 ---
 
 ## Abstract
 
-Two mathematical frameworks have independently described how systems extract reliable signal from finite, noisy data: statistical learning theory and evolutionary quantitative genetics. This paper proves that Fisher's Fundamental Theorem of Natural Selection, the Price Equation, and PAC generalization bounds are all instances of a single structure: empirical risk minimization on a Fisher-information manifold under a capacity constraint. Additive genetic variance *V*<sub>A</sub> is the evolutionary analogue of Rademacher complexity; *N*<sub>e</sub> plays the role of sample size. Empirical validation across nine cancer types yields *r* = 0.96 (*p* < 0.0001).
+Drug resistance is responsible for the majority of cancer deaths, yet its evolutionary dynamics remain poorly predicted at treatment initiation. This paper shows that resistance evolution timing across nine cancer types is predictable (*r* = 0.96, *p* < 0.0001) using a formula parameterised by two quantities already measured in standard clinical sequencing pipelines: intratumour heterogeneity (*h*² proxy) and effective population size (*N*<sub>e</sub>).
+
+This predictive power arises from a formal proof that evolutionary quantitative genetics and PAC learning theory are instances of a single mathematical structure: **empirical risk minimization on a Fisher-information manifold under a capacity constraint**. Fisher's Fundamental Theorem of Natural Selection, the Price Equation, and PAC generalization bounds are facets of this shared geometry. Additive genetic variance *V*<sub>A</sub> is the evolutionary analogue of Rademacher complexity; *N*<sub>e</sub> plays the role of training set size.
+
+Standard-of-care sequential monotherapy inadvertently provides tumours with the iterative training loops that maximise evolutionary learning. Upfront combination therapy maintaining *N*<sub>e</sub> < *N*\*<sub>e</sub> closes the evolutionary search space before resistance can be discovered. **This is not a conceptual reframing: it is a theorem.**
 
 ---
 
@@ -26,12 +40,14 @@ Two mathematical frameworks have independently described how systems extract rel
 │   ├── fig3_pac_bound.pdf       # Figure 3: cross-cancer PAC bound test
 │   └── fig4_VA_capacity.pdf     # Figure 4: V_A as evolutionary capacity
 └── arxiv_submission/
-    ├── main.tex                 # LaTeX manuscript
-    ├── main.pdf                 # compiled manuscript
+    ├── main.tex                 # LaTeX manuscript (original)
+    ├── main_v2.tex              # clinical reframing revision
+    ├── main_v3.tex              # structural revision (Nature submission)
+    ├── main_v3.pdf              # compiled manuscript (current submission)
+    ├── cover_letter.tex/.pdf    # Nature cover letter
     ├── refs.bib                 # BibTeX bibliography (58 entries)
     ├── supplementary.tex        # Supplementary Notes (S1–S7)
-    ├── supplementary.pdf        # compiled supplementary
-    └── figures/                 # figure PDFs for LaTeX
+    └── supplementary.pdf        # compiled supplementary (17 pages)
 ```
 
 ---
