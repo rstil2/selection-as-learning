@@ -13,7 +13,6 @@ R. Craig Stillwell (independent researcher)
 | Result | Value | What it means |
 |--------|-------|---------------|
 | Cross-cancer PAC bound validation | **r = 0.96**, p < 0.0001 (9 cancer types) | The theoretical resistance-evolution threshold predicts observed resistance durability from two clinical measurements |
-| FTNS convergence-rate validation | **r = 0.999**, p < 0.0001 (20 cancer types) | Fisher's Fundamental Theorem predicts measured tumour selection coefficients with near-perfect accuracy |
 | Computable clinical threshold | **N\*_e** from standard WGS | The tumour cell burden below which reliable resistance evolution is mathematically precluded — calculable at diagnosis |
 
 ---

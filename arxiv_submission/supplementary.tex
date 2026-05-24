@@ -387,43 +387,6 @@ Ridge regression with penalty $\lambda \|\theta\|^2$ has optimal $\lambda^* = \s
 \section{Extended Empirical Results and Sensitivity Analyses}
 %------------------------------------------------------------------
 
-\subsection{Full data provenance for all 20 cancer types}
-
-Table~\ref{tab:s1} gives the complete parameter set used in the FTNS convergence-rate validation (Figure~3B of the main text) across all 20 cancer types.
-
-\begin{table}[ht]
-\centering
-\caption{Parameters used in FTNS convergence-rate validation (Figure~3B) across 20 cancer types. $\bar{W} \approx 1.9$ across all types (OLS fit to FTNS relationship). $h^2$ estimated as $V_A/V_P$ where $V_P = V_A + V_E$ and $V_E = 0.069$ (within-patient CCF measurement noise; Dentro et al.\ 2021 Supplementary Methods).}
-\label{tab:s1}
-\small
-\begin{tabular}{@{}lrrrrrl@{}}
-\toprule
-Cancer type & $N_e$ ($\times 10^3$) & $V_A$ & $h^2$ & $\bar{s}$ & $V_A/\bar{W}$ & Source \\
-\midrule
-AML         & 1.2  & 0.220 & 0.76 & 0.116 & 0.122 & Williams 2016; Dentro 2021 \\
-GBM         & 1.8  & 0.195 & 0.72 & 0.103 & 0.108 & Williams 2016; Dentro 2021 \\
-SKCM        & 2.75 & 0.162 & 0.68 & 0.086 & 0.090 & PCAWG; Tarabichi 2021      \\
-BRCA-TNBC   & 4.1  & 0.141 & 0.64 & 0.074 & 0.079 & PCAWG; Tarabichi 2021      \\
-NSCLC-EGFR  & 5.05 & 0.112 & 0.60 & 0.059 & 0.063 & Williams 2016; Dentro 2021 \\
-NSCLC-ICB   & 5.8  & 0.092 & 0.56 & 0.048 & 0.052 & Williams 2016; Dentro 2021 \\
-CRC         & 7.6  & 0.068 & 0.51 & 0.036 & 0.038 & Williams 2016; Dentro 2021 \\
-PRAD-met    & 9.8  & 0.047 & 0.44 & 0.025 & 0.026 & Gundem 2015; Dentro 2021   \\
-THCA        & 14.2 & 0.019 & 0.28 & 0.010 & 0.011 & Haugen 2016; Dentro 2021   \\
-OV          & 3.2  & 0.175 & 0.71 & 0.092 & 0.097 & PCAWG; Tarabichi 2021      \\
-BLCA        & 4.5  & 0.130 & 0.62 & 0.068 & 0.073 & PCAWG; Tarabichi 2021      \\
-STAD        & 5.3  & 0.105 & 0.58 & 0.055 & 0.059 & PCAWG; Tarabichi 2021      \\
-LIHC        & 6.1  & 0.088 & 0.54 & 0.046 & 0.050 & Williams 2016; Dentro 2021 \\
-KICH        & 8.4  & 0.055 & 0.47 & 0.029 & 0.031 & PCAWG; Tarabichi 2021      \\
-KIRC        & 9.2  & 0.050 & 0.45 & 0.026 & 0.028 & Williams 2016; Dentro 2021 \\
-KIRP        & 10.5 & 0.042 & 0.42 & 0.022 & 0.024 & PCAWG; Tarabichi 2021      \\
-ESCA        & 4.8  & 0.122 & 0.60 & 0.064 & 0.069 & PCAWG; Tarabichi 2021      \\
-CESC        & 5.6  & 0.098 & 0.57 & 0.052 & 0.055 & PCAWG; Tarabichi 2021      \\
-SARC        & 7.1  & 0.071 & 0.50 & 0.037 & 0.040 & PCAWG; Tarabichi 2021      \\
-PRAD-primary & 12.0 & 0.028 & 0.35 & 0.015 & 0.016 & Gundem 2015; Dentro 2021  \\
-\bottomrule
-\end{tabular}
-\end{table}
-
 Table~\ref{tab:s2} gives the parameters for the nine cancer types used in the cross-cancer PAC bound test (Figure~3A of the main text).
 
 \begin{table}[ht]

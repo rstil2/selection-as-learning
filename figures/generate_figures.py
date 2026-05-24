@@ -509,11 +509,10 @@ def make_figure3(path="figures/fig3_pac_bound.pdf"):
     # Theory: high ε* → settling in suboptimal resistance → short TTR₂ → high gen_err
     r_val, p_val = stats.pearsonr(eps_pred, gen_arr)
 
-    fig, axes = plt.subplots(1, 2, figsize=(NATURE_2COL, NATURE_2COL * 0.52))
-    fig.subplots_adjust(wspace=0.42, left=0.09, right=0.97, top=0.88, bottom=0.14)
+    fig, ax = plt.subplots(1, 1, figsize=(NATURE_COL, NATURE_COL * 0.95))
+    fig.subplots_adjust(left=0.13, right=0.97, top=0.90, bottom=0.14)
 
-    # ─ Panel A: ε* vs resistance durability (1/TTR₂) ─────────────────────────
-    ax = axes[0]
+    # ─ PAC bound: ε* vs resistance durability (1/TTR₂) ───────────────────────
 
     for i, (lbl, Ne, VA, h2, ge, mkr, col) in enumerate(CANCER_DATA):
         ax.scatter(eps_pred[i], ge,
@@ -531,7 +530,7 @@ def make_figure3(path="figures/fig3_pac_bound.pdf"):
     ax.set_xlabel(r"PAC bound $\varepsilon^*\!(N_e,\, V_A)$  (Theorem 3)", labelpad=3)
     ax.set_ylabel(r"Resistance instability $(1/\mathrm{TTR}_2$, months$^{-1})$",
                   labelpad=3)
-    ax.set_title("A  Cross-cancer PAC bound validation", loc="left", fontsize=9)
+    ax.set_title("Cross-cancer PAC bound validation (Theorem 3)", loc="left", fontsize=9)
     ax.legend(fontsize=7.5, loc="upper left", handlelength=1.5)
 
     p_str = f"= {p_val:.4f}" if p_val >= 0.0001 else "< 0.0001"
@@ -542,52 +541,11 @@ def make_figure3(path="figures/fig3_pac_bound.pdf"):
             fontsize=7.5, color="0.35",
             bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="0.8", lw=0.5))
 
-    # ─ Panel B: FTNS convergence rate — V_A vs. adaptation rate (Theorem 1) ──
-    # From EXTENDED_DATA: s_bar ≈ V_A / W̄ (FTNS: d log W̄/dt = V_A/W̄²)
-    # Plot V_A vs s_bar; theory predicts proportionality
-    ext_labels, ext_VA, ext_s, ext_Ne = zip(*EXTENDED_DATA)
-    ext_VA = np.array(ext_VA); ext_s = np.array(ext_s)
-
-    r2, p2 = stats.pearsonr(ext_VA, ext_s)
-    m2, b2, *_ = stats.linregress(ext_VA, ext_s)
-
-    ax2 = axes[1]
-    sc = ax2.scatter(ext_VA, ext_s,
-                     c=np.log10(np.array(ext_Ne)), cmap="viridis_r",
-                     s=55, zorder=4, lw=0.5, edgecolors="w",
-                     vmin=np.log10(min(ext_Ne)) * 0.98,
-                     vmax=np.log10(max(ext_Ne)) * 1.02)
-    for i, lbl in enumerate(ext_labels):
-        short = lbl.replace("\n", " ")
-        ax2.text(ext_VA[i] * 1.03, ext_s[i], short, fontsize=5.8, va="center")
-
-    xx2 = np.linspace(min(ext_VA) * 0.88, max(ext_VA) * 1.08, 100)
-    ax2.plot(xx2, m2 * xx2 + b2, color="0.3", lw=1.2, ls="--",
-             label=fr"OLS ($r = {r2:.2f}$)")
-
-    ax2.set_xlabel(r"Additive genetic variance $V_A$  (CCF variance)", labelpad=3)
-    ax2.set_ylabel(r"Mean selection coefficient $\bar{s}$", labelpad=3)
-    ax2.set_title(r"B  FTNS: $d\bar{W}/dt = V_A/\bar{W}$ (Theorem 1)", loc="left",
-                  fontsize=9)
-    ax2.legend(fontsize=7.5, loc="upper left", handlelength=1.5)
-
-    p2_str = f"= {p2:.4f}" if p2 >= 0.0001 else "< 0.0001"
-    ax2.text(0.97, 0.05,
-             fr"$r = {r2:.2f}$, $p$ {p2_str}  ($n = {len(ext_labels)}$)",
-             transform=ax2.transAxes, ha="right", va="bottom",
-             fontsize=7.5, color="0.35",
-             bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="0.8", lw=0.5))
-
-    cbar2 = fig.colorbar(sc, ax=ax2, shrink=0.80, pad=0.03)
-    cbar2.set_label(r"$\log_{10} N_e$", fontsize=7.5)
-    cbar2.ax.tick_params(labelsize=7)
-
     plt.savefig(path)
     plt.close()
     print(f"Saved {path}")
 
     return dict(r_pac=r_val, p_pac=p_val, n_pac=len(CANCER_DATA),
-                r_ftns=r2, p_ftns=p2, n_ftns=len(ext_labels),
                 eps_min=eps_pred.min(), eps_max=eps_pred.max())
 
 
