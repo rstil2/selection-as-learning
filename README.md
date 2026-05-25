@@ -46,7 +46,7 @@ Standard-of-care sequential monotherapy inadvertently provides tumours with the 
     ├── cover_letter.tex/.pdf    # Nature cover letter
     ├── refs.bib                 # BibTeX bibliography (58 entries)
     ├── supplementary.tex        # Supplementary Notes (S1–S7)
-    └── supplementary.pdf        # compiled supplementary (17 pages)
+    └── supplementary.pdf        # compiled supplementary (16 pages)
 ```
 
 ---
@@ -100,13 +100,13 @@ Requires a TeX Live installation with `pdflatex` and `bibtex`.
 
 ```bash
 cd arxiv_submission
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex       # produces main.pdf (23 pages)
+pdflatex main_v3.tex
+bibtex main_v3
+pdflatex main_v3.tex
+pdflatex main_v3.tex       # produces main_v3.pdf (25 pages)
 
 pdflatex supplementary.tex
-pdflatex supplementary.tex  # produces supplementary.pdf (17 pages)
+pdflatex supplementary.tex  # produces supplementary.pdf (16 pages)
 ```
 
 ---
