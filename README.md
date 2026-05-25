@@ -115,8 +115,7 @@ pdflatex supplementary.tex  # produces supplementary.pdf (17 pages)
 
 ```bibtex
 @article{stillwell2026selection,
-  title   = {Selection as Learning: A Formal Unification of Evolutionary
-             Quantitative Genetics and {PAC} Learning Theory},
+  title   = {Natural selection is empirical risk minimisation},
   author  = {Stillwell, R. Craig},
   journal = {bioRxiv},
   year    = {2026},
