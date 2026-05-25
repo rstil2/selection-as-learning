@@ -1,6 +1,6 @@
-# Selection as Learning
+# Natural selection is empirical risk minimisation
 
-**Selection as Learning: A Formal Unification of Evolutionary Quantitative Genetics and PAC Learning Theory**
+**Natural selection is empirical risk minimisation**
 
 R. Craig Stillwell (independent researcher)
 
