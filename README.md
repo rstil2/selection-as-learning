@@ -133,7 +133,8 @@ pdflatex supplementary.tex  # produces supplementary.pdf (16 pages)
 
 ---
 
-## Licence
+## License
 
-Code: [MIT](LICENSE)  
+All original content in this repository is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). You may share and adapt the material for non-commercial purposes, with appropriate attribution. Commercial use is not permitted. See the LICENSE file for full terms.
+
 Cached public data (`msk_pd1_cache.json`): [CC-BY](https://creativecommons.org/licenses/by/4.0/) (original licence from cBioPortal / Hellmann et al. 2018)
