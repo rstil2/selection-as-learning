@@ -1,0 +1,25 @@
+{
+  "title": "Analysis code: Natural selection is empirical risk minimisation (cross-domain universality)",
+  "upload_type": "software",
+  "description": "Statistical analysis and figure generation for cross-domain universality tests.",
+  "creators": [
+    {
+      "name": "Stillwell, R. Craig",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "keywords": [
+    "natural selection",
+    "empirical risk minimisation",
+    "PAC learning",
+    "universality"
+  ],
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.21203/rs.3.rs-9848110/v1",
+      "scheme": "doi"
+    }
+  ]
+}
