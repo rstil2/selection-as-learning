@@ -1,0 +1,37 @@
+{
+  "architecture": "ViT (patch=4, depth=6, heads=6, dim=384)",
+  "dataset": "CIFAR-10",
+  "epoch_sr": 5,
+  "epochs_total": 60,
+  "conditions": {
+    "0.0": {
+      "noise_pct": 0,
+      "sr_epoch5": 0.6517833618864832,
+      "final_val_loss": 0.7182191047668457
+    },
+    "0.1": {
+      "noise_pct": 10,
+      "sr_epoch5": 0.6465659086973904,
+      "final_val_loss": 0.765853551197052
+    },
+    "0.2": {
+      "noise_pct": 20,
+      "sr_epoch5": 0.5908127698658749,
+      "final_val_loss": 0.8688827499389649
+    },
+    "0.3": {
+      "noise_pct": 30,
+      "sr_epoch5": 0.6389325070141368,
+      "final_val_loss": 1.0258847877502442
+    },
+    "0.4": {
+      "noise_pct": 40,
+      "sr_epoch5": 0.6656960075160527,
+      "final_val_loss": 1.1482698623657226
+    }
+  },
+  "pearson_r": 0.23327787628580632,
+  "pearson_p": 1.0,
+  "resnet18_r": -0.97,
+  "direction_consistent": false
+}

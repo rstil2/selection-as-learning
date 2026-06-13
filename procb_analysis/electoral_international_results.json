@@ -1,0 +1,47 @@
+{
+  "methodology": "Movement Index (MI = V_within / V_total, rolling window)",
+  "threshold": 0.5,
+  "cases": {
+    "UK_2024_Conservatives": {
+      "election_date": "2024-07-04",
+      "mean_mi_final_2w": 0.8244571172555044,
+      "predicted_fragile": true,
+      "true_fragile": true,
+      "correct": true,
+      "outcome": "Structural collapse \u2014 lost 251 seats"
+    },
+    "France_2024_Ensemble": {
+      "election_date": "2024-06-30",
+      "mean_mi_final_2w": 0.8227321878303532,
+      "predicted_fragile": true,
+      "true_fragile": true,
+      "correct": true,
+      "outcome": "Structural fragility \u2014 lost plurality"
+    },
+    "Canada_2024_Trudeau": {
+      "election_date": "2025-01-06",
+      "mean_mi_final_2w": 0.2555101148851149,
+      "predicted_fragile": false,
+      "true_fragile": true,
+      "correct": false,
+      "outcome": "Structural fragility \u2014 Trudeau resigned"
+    },
+    "Canada_2025_Carney": {
+      "election_date": "2025-04-28",
+      "mean_mi_final_2w": 0.16785714285714287,
+      "predicted_fragile": false,
+      "true_fragile": false,
+      "correct": true,
+      "outcome": "Structural recovery \u2014 Carney won majority"
+    }
+  },
+  "combined_with_original": {
+    "original_n": 4,
+    "original_correct": 4,
+    "new_n": 4,
+    "new_correct": 3,
+    "total_n": 8,
+    "total_correct": 7,
+    "binomial_p_one_sided": 0.03515625
+  }
+}

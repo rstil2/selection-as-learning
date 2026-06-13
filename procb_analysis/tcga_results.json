@@ -1,0 +1,106 @@
+{
+  "data_source": "cBioPortal live API",
+  "references": {
+    "MATH_scores": "Mroz EA & Rocco JW (2015) PLOS ONE 10(8):e0125102",
+    "clinical_outcomes": "Hoadley et al. (2018) Cell 173:291-304 (TCGA Pan-Cancer Atlas)",
+    "cellularity": "Liu et al. (2018) Cell 173:291-304"
+  },
+  "n_cancer_types": 9,
+  "cancer_types": [
+    "NSCLC",
+    "Colorectal",
+    "Breast (ER+)",
+    "Ovarian",
+    "Pancreatic",
+    "Melanoma",
+    "Bladder",
+    "GBM",
+    "RCC"
+  ],
+  "Ne_star_values": [
+    1.325581395348837,
+    0.7921146953405017,
+    0.5822784810126582,
+    1.6595744680851063,
+    3.424778761061947,
+    0.9920318725099602,
+    0.7421602787456445,
+    0.6556291390728477,
+    0.4792899408284024
+  ],
+  "resistance_durability_months": [
+    27.1,
+    35.8,
+    82.5,
+    42.7,
+    15.3,
+    49.2,
+    44.8,
+    14.7,
+    63.4
+  ],
+  "pearson_r": -0.5351287112390146,
+  "pearson_p_onesided": 0.06882401152574162,
+  "original_r": 0.96,
+  "direction_consistent": false,
+  "loo_r_range": [
+    -0.7313555972502433,
+    -0.3403014811434295
+  ],
+  "raw_data": {
+    "LUAD": [
+      28.5,
+      27.1,
+      0.62,
+      566
+    ],
+    "COAD": [
+      22.1,
+      35.8,
+      0.71,
+      380
+    ],
+    "BRCA": [
+      18.4,
+      82.5,
+      0.68,
+      1084
+    ],
+    "OV": [
+      31.2,
+      42.7,
+      0.74,
+      316
+    ],
+    "PAAD": [
+      38.7,
+      15.3,
+      0.55,
+      185
+    ],
+    "SKCM": [
+      24.9,
+      49.2,
+      0.66,
+      448
+    ],
+    "BLCA": [
+      21.3,
+      44.8,
+      0.69,
+      411
+    ],
+    "GBM": [
+      19.8,
+      14.7,
+      0.82,
+      393
+    ],
+    "KIRC": [
+      16.2,
+      63.4,
+      0.61,
+      537
+    ]
+  }
+}
