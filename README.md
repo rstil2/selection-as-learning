@@ -39,6 +39,11 @@ Standard-of-care sequential monotherapy inadvertently provides tumours with the 
 
 ```
 .
+├── ssd/                         # SSD manifold theory (JEB submission)
+│   ├── ssd_theory_utils.py      # V_A(SSD), N_e* calculations
+│   ├── ssd_simulations.py       # Simulations + figure generation
+│   ├── figures/                 # Figures 1, 2, S1 (PDF)
+│   └── README.md
 ├── figures/
 │   ├── generate_figures.py      # all figure code (run from repo root)
 │   ├── msk_pd1_cache.json       # cached cBioPortal data (CC-BY, public)
@@ -56,6 +61,19 @@ Standard-of-care sequential monotherapy inadvertently provides tumours with the 
     ├── supplementary.tex        # Supplementary Notes (S1–S7)
     └── supplementary.pdf        # compiled supplementary (16 pages)
 ```
+
+---
+
+## SSD extension (sexual size dimorphism)
+
+Code for the companion theory paper on SSD capacity limits lives in [`ssd/`](ssd/README.md):
+
+```bash
+cd ssd
+python ssd_simulations.py
+```
+
+See [`ssd/README.md`](ssd/README.md) for `N_e*` calculations and parameter examples.
 
 ---
 
